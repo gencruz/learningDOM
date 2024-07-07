@@ -22,23 +22,31 @@ btnRefresh.addEventListener("click", handleClick);
 
 // handling selectors page scripts
 function demoSelectors() {
-    var elementById = document.getElementById(exampleId);
+    var elementById = document.getElementById("exampleId");
     elementById.style.color = "blue";
     console.log("Selected By ID:", elementById);
+
+    var elementByClass = document.querySelectorAll(".exampleClass");
+    elementByClass.forEach(element => {
+        element.style.backgroundColor = "yellow";
+        console.log("Selected By Class:", element);
+    });
+
+    var elementByTag = document.querySelectorAll("p");
+    elementByTag.forEach(element => {
+        element.style.fontWeight = "bold";
+        console.log("Selected By Tag:", element);
+    });
+
+    var elementByQuery = document.querySelector(".paragraph");
+    elementByQuery.style.fontsize = "20px";
+    console.log("Selected By Query Selector:", elementByQuery);
+
+    var elementByQueryAll = document.querySelectorAll(".paragraph");
+    elementByQueryAll.forEach(element => {
+        element.style.textDecoration = "underline";
+        console.log("Selected By Query Selector All:", element);
+
+    });
+
 }
-var elementByClass = document.querySelectorAll(".exampleClass");
-elementByClass.forEach(element => {
-    element.style.backgroundcolor = "yellow";
-    console.log("Selected By Class:", element);
-});
-
-var elementByTag = document.querySelectorAll("p");
-elementByTag.forEach(element => {
-    element.style.fontWeight = "bold";
-    console.log("Selected By Tag:", element);
-});
-
-var elementByQuery = document.querySelector(".paragraph");
-elementByQuery.style.fontsize = "20px";
-console.log("Selected By Query Selector:", elementByQuery);
-
