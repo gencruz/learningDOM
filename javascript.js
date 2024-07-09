@@ -5,6 +5,7 @@ var subtitle = document.getElementById("subtitle");
 var description = document.querySelector(".description");
 var btnChange = document.getElementById("btnChange");
 var btnRefresh = document.getElementById("btnRefresh");
+var linkIndex = document.getElementById("linkIndex");
 
 //Second define the event, that an element does
 btnChange.addEventListener("click", function () {
@@ -48,5 +49,11 @@ function demoSelectors() {
         console.log("Selected By Query Selector All:", element);
 
     });
-
 }
+
+// call selectors and close page after
+function closeWindow() {
+    linkIndex = window.close("selectors.html");
+}
+
+linkIndex.addEventListener("click", closeWindow);
