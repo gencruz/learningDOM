@@ -5,7 +5,6 @@ var subtitle = document.getElementById("subtitle");
 var description = document.querySelector(".description");
 var btnChange = document.getElementById("btnChange");
 var btnRefresh = document.getElementById("btnRefresh");
-var linkIndex = document.getElementById("linkIndex");
 
 //Second define the event, that an element does
 btnChange.addEventListener("click", function () {
@@ -51,9 +50,38 @@ function demoSelectors() {
     });
 }
 
-// call selectors and close page after
+// call function to close page after
+var linkIndex = document.getElementById("linkIndex");
 function closeWindow() {
     linkIndex = window.close("selectors.html");
 }
-
 linkIndex.addEventListener("click", closeWindow);
+
+// this deal with forms functions and actions
+var linkForms = document.getElementById("linkForms");
+//create a counter and iniciate as zero
+//create a function to add fields
+var count = 0;
+function addField() {
+    //increment the counter by 1
+    count++;
+    // get the element related to the form
+    var formContainer = document.getElementById("formContainer");
+    // create elments for the form
+    var divField = document.createElement("div");
+    divField.classList.add("formField");
+
+    var labelField = document.createElement("label");
+    labelField.textContent = `Field ${count}:`;
+
+    var inputField = document.createElement("input");
+    inputField.type = "text";
+    inputField.name = `field${count}`;
+
+    //add fields
+    divField.appendChild(labelField);
+    divField.appendChild(inputField);
+
+    formContainer.appendChild(divField);
+
+}

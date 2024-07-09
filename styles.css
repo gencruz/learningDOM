@@ -12,6 +12,7 @@ body {
 
 h1 {
     color: #333;
+    text-align: center;
 }
 
 h2 {
@@ -44,4 +45,26 @@ button:hover {
 .highlight {
     color: blue;
     font-weight: bold;
+}
+
+/* styles for forms go here */
+#formContainer {
+    margin-top: 20px;
+}
+
+.formBody {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-top: 3px;
 }
