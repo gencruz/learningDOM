@@ -61,22 +61,21 @@ linkIndex.addEventListener("click", closeWindow);
 var linkForms = document.getElementById("linkForms");
 //create a counter and iniciate as zero
 //create a function to add fields
-var count = 0;
+var counter = 0;
 function addField() {
     //increment the counter by 1
-    count++;
+    counter++;
     // get the element related to the form
     var formContainer = document.getElementById("formContainer");
     // create elments for the form
     var divField = document.createElement("div");
-    divField.classList.add("formField");
+    divField.classList.add("fieldForm");
 
     var labelField = document.createElement("label");
-    labelField.textContent = `Field ${count}:`;
-
+    labelField.textContent = `Field ${counter}:`;
     var inputField = document.createElement("input");
     inputField.type = "text";
-    inputField.name = `field${count}`;
+    inputField.name = `fieldForm${counter}`;
 
     //add fields
     divField.appendChild(labelField);
@@ -85,3 +84,4 @@ function addField() {
     formContainer.appendChild(divField);
 
 }
+linkForms.addEventListener("click", addField);
