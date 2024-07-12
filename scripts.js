@@ -57,7 +57,7 @@ function closeWindow() {
 }
 linkIndex.addEventListener("click", closeWindow);
 
-// this deal with forms functions and actions
+/** this deal with forms functions and actions
 var linkForms = document.getElementById("linkForms");
 //create a counter and iniciate as zero
 //create a function to add fields
@@ -84,4 +84,4 @@ function addField() {
     formContainer.appendChild(divField);
 
 }
-linkForms.addEventListener("click", addField);
+linkForms.addEventListener("click", addField);*/
