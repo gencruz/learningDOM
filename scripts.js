@@ -57,31 +57,10 @@ function closeWindow() {
 }
 linkIndex.addEventListener("click", closeWindow);
 
-/** this deal with forms functions and actions
-var linkForms = document.getElementById("linkForms");
-//create a counter and iniciate as zero
-//create a function to add fields
-var counter = 0;
-function addField() {
-    //increment the counter by 1
-    counter++;
-    // get the element related to the form
-    var formContainer = document.getElementById("formContainer");
-    // create elments for the form
-    var divField = document.createElement("div");
-    divField.classList.add("fieldForm");
-
-    var labelField = document.createElement("label");
-    labelField.textContent = `Field ${counter}:`;
-    var inputField = document.createElement("input");
-    inputField.type = "text";
-    inputField.name = `fieldForm${counter}`;
-
-    //add fields
-    divField.appendChild(labelField);
-    divField.appendChild(inputField);
-
-    formContainer.appendChild(divField);
-
+// call function to manipulate style via DOM
+function applyStyles() {
+    elementsToStyle.style.backgroundColor = "red";
+    elementsToStyle.style.color = "blue";
+    elementsToStyle.style.textDecoration = "underline";
+    elementsToStyle.textContent = "Use the Promotion Code Now";
 }
-linkForms.addEventListener("click", addField);*/

@@ -68,3 +68,11 @@ select {
     box-sizing: border-box;
     margin-top: 3px;
 }
+
+#elementsToStyle {
+    border: 1px solid #333;
+    padding: 10px;
+    margin-top: 20px;
+    width: 300px;
+    text-align: center;
+}
